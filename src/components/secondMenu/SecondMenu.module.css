@@ -1,0 +1,183 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem .5rem;
+  align-items: center;
+  box-shadow: 0px 3px 10px 3px rgba(122, 121, 121, 0.477);
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.phone .hideMobile {
+  color: #fdb801;
+}
+
+.phoneIcon {
+  display: grid;
+  place-items: center;
+  padding: .5rem;
+  border-radius: 50%;
+  background-color: #fdb801;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.hideMobile {
+  display: none;
+  margin: 0 .5rem;
+}
+
+.catalogIcon {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  border-radius: 10px;
+  background-color: #f0f1f2;
+}
+
+.searchIcon {
+  display: grid;
+  place-items: center;
+}
+
+input {
+  border: none; 
+  background-color: transparent; 
+  outline: none;
+  width: 6rem;
+}
+
+.cart {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.cartNotification {
+  position: absolute;
+  top: -.4rem;
+  right: -.4rem;
+  font-size: 1rem;
+  background-color: #fdb801;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+}
+
+
+.leftMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  background-color: #f0f1f2;
+  color: #000;
+  transform: translateX(-100%);
+  transition: all .3s ease-in-out;
+  z-index: 4;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #00000080;
+  transition: opacity .3s ease;
+  z-index: 2;
+}
+
+.overlay.hide {
+  opacity: 0;
+  z-index: -1;
+  transition: all .3s ease;
+}
+
+.leftMenu.open {
+  transform: translateX(0);
+}
+
+.leftMenu.open .closeBtn {
+  transform: rotate(0);
+  opacity: 1;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  transform: rotate(-180deg);
+  transform-origin: center;
+  opacity: 0;
+  transition: all .5s .2s ease;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 1400px) {
+  .header {
+    justify-content: center;
+    gap: 4rem ;
+    font-size: 1.5rem;
+    height: 12vh;
+  }
+
+  .catalog {
+    font-size: 1.8rem;
+  }
+
+  .catalogIcon {
+    font-size: 2.5rem;
+    margin-right: .5rem;
+  }
+
+  .search {
+    font-size: 2rem;
+  }
+
+  input {
+    width: 15rem;
+    font-size: 1.3rem;
+  }
+
+  .hideMobile {
+    display: block;
+  }
+
+  .cart {
+    font-size: 2.5rem;
+  }
+}

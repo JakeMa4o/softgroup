@@ -1,0 +1,127 @@
+.header {
+  min-height: 7vh;
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+  position: relative;
+}
+
+.highLight {
+  display: inline-block;
+  background-color: #fdb801;
+  color: #000000;
+  margin: 0 .3rem 0 5rem;
+  border-radius: 3%;
+  padding: 0.2rem .4rem;
+  line-height: 1;
+  /* height: fit-content */
+}
+
+.logo {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImg {
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin: 0 .3rem;
+}
+
+.hamburger {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+
+
+
+
+
+
+.rightMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  color: #000;
+  transform: translateX(100%);
+  transition: all .3s ease-in-out;
+  z-index: 4;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #00000080;
+  transition: opacity .3s ease;
+  z-index: 2;
+}
+
+.overlay.hide {
+  opacity: 0;
+  z-index: -1;
+  transition: all .3s ease;
+}
+
+.rightMenu.open {
+  transform: translateX(0);
+}
+
+.rightMenu.open .closeBtn {
+  transform: rotate(0);
+  opacity: 1;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  transform: rotate(180deg);
+  transform-origin: center;
+  opacity: 0;
+  transition: all .5s .2s ease;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.locationName {
+  font-size: .9rem;
+}
+
+
+@media screen and (min-width: 1400px) {
+  .header {
+    justify-content: center;
+    font-size: 2rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
